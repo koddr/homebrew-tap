@@ -12,7 +12,7 @@ class Json2csv < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/koddr/json2csv/releases/download/v1.0.4/json2csv_1.0.4_darwin_arm64.tar.gz"
-      sha256 "b121286af94e874fc262111031922ff28097fe37db51e4ae276c5b5448972580"
+      sha256 "6464871904522a6f790916af49828f06ec96627aa717532c598bf06fa596c5b2"
 
       def install
         bin.install "json2csv"
@@ -20,7 +20,7 @@ class Json2csv < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/koddr/json2csv/releases/download/v1.0.4/json2csv_1.0.4_darwin_amd64.tar.gz"
-      sha256 "7da54af096e4f41f965db92002f4452d7c2895e0d62d3d1a6391da56377ac941"
+      sha256 "99bbdd09cf0bd732def34a6ddf84254cb8bb67d4008864b7800244982bb14e9d"
 
       def install
         bin.install "json2csv"
@@ -29,17 +29,17 @@ class Json2csv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/koddr/json2csv/releases/download/v1.0.4/json2csv_1.0.4_linux_amd64.tar.gz"
-      sha256 "be8afe64d7196e2f48135a9c89fad33414c648cc119cc5b0a50e52ceaf7d502f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/koddr/json2csv/releases/download/v1.0.4/json2csv_1.0.4_linux_arm64.tar.gz"
+      sha256 "8b78fcf662476afab1c747f9b416543e72f57a0f188fbc3fd30537577ea1aca4"
 
       def install
         bin.install "json2csv"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koddr/json2csv/releases/download/v1.0.4/json2csv_1.0.4_linux_arm64.tar.gz"
-      sha256 "a745cac18bb72a941754d82cd8a7be13588bfc9bae15d6a3026749f266e6db2b"
+    if Hardware::CPU.intel?
+      url "https://github.com/koddr/json2csv/releases/download/v1.0.4/json2csv_1.0.4_linux_amd64.tar.gz"
+      sha256 "87a986c2860eb061267d8bb862863c7c977124f8cfbd9ca6888e089e20f3fc78"
 
       def install
         bin.install "json2csv"
