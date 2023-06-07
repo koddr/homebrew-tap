@@ -6,21 +6,21 @@ class Json2csv < Formula
   desc "The parser can read given folder with *.json files, filtering and qualifying input data with intent & stop words dictionaries and save results to CSV files by given chunk size.
 "
   homepage "https://github.com/koddr/json2csv"
-  version "1.0.2"
+  version "1.0.3"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/koddr/json2csv/releases/download/v1.0.2/json2csv_1.0.2_darwin_arm64.tar.gz"
-      sha256 "7aacfb9ae18fb6af63b15cc8a82e9c4723874a17dda1a2b30a1793e2ed0a1a30"
+      url "https://github.com/koddr/json2csv/releases/download/v1.0.3/json2csv_1.0.3_darwin_arm64.tar.gz"
+      sha256 "e3d58ef96211d9a85821fa03be214a2b86be1fa7e16ba346a101130250f7cc0f"
 
       def install
         bin.install "json2csv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koddr/json2csv/releases/download/v1.0.2/json2csv_1.0.2_darwin_amd64.tar.gz"
-      sha256 "acfa76ec62c83175c2f8d831f014e6d95ee03dba3293b2513493f94226437672"
+      url "https://github.com/koddr/json2csv/releases/download/v1.0.3/json2csv_1.0.3_darwin_amd64.tar.gz"
+      sha256 "3352bf179048d1d4ba6af8979bc6acf2e20bbac567bfd488b4d5582eed401404"
 
       def install
         bin.install "json2csv"
@@ -29,17 +29,17 @@ class Json2csv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koddr/json2csv/releases/download/v1.0.2/json2csv_1.0.2_linux_arm64.tar.gz"
-      sha256 "f81d0e525d70cd417a228a494f56bd737c1c9855f6a9c0d65746baeb17e49cc1"
+    if Hardware::CPU.intel?
+      url "https://github.com/koddr/json2csv/releases/download/v1.0.3/json2csv_1.0.3_linux_amd64.tar.gz"
+      sha256 "efaa9040283872efdf0d90d1247d9b24a219af73ba7d804d75b2bd1684a8e234"
 
       def install
         bin.install "json2csv"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/koddr/json2csv/releases/download/v1.0.2/json2csv_1.0.2_linux_amd64.tar.gz"
-      sha256 "2c4255bf964a2a74938088aa2ca086e61d9d72a566de27e05a5bbc1895dc39c9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/koddr/json2csv/releases/download/v1.0.3/json2csv_1.0.3_linux_arm64.tar.gz"
+      sha256 "fd4ac67dd7cfafefec7e3f978672736f78c1c4c6addc89adaa091a96f93638ec"
 
       def install
         bin.install "json2csv"
@@ -55,14 +55,7 @@ class Json2csv < Formula
 
       Next, run json2csv parser with options:
 
-      json2csv \
-        -json    /path/to/input/json/folder \
-        -intents /path/to/intents-file.json \
-        -filter  /path/to/filter-file.json \
-        -output  /path/to/output/csv/folder \
-        -content-field message \
-        -min-word-len  5 \
-        -chunk 1000
+      $ json2csv -json /path/to/input/json/folder -intents /path/to/intents-file.json -filter /path/to/filter-file.json -output /path/to/output/csv/folder -content-field message -min-word-len 5 -chunk 1000
 
       Done! Output CSV file(s) has a default comma (,) separators between columns.
     EOS
