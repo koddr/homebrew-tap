@@ -6,21 +6,21 @@ class Json2csv < Formula
   desc "The parser can read given folder with *.json files, filtering and qualifying input data with intent & stop words dictionaries and save results to CSV files by given chunk size.
 "
   homepage "https://github.com/koddr/json2csv"
-  version "1.0.3"
+  version "1.0.4"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/koddr/json2csv/releases/download/v1.0.3/json2csv_1.0.3_darwin_arm64.tar.gz"
-      sha256 "e3d58ef96211d9a85821fa03be214a2b86be1fa7e16ba346a101130250f7cc0f"
+      url "https://github.com/koddr/json2csv/releases/download/v1.0.4/json2csv_1.0.4_darwin_arm64.tar.gz"
+      sha256 "b121286af94e874fc262111031922ff28097fe37db51e4ae276c5b5448972580"
 
       def install
         bin.install "json2csv"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koddr/json2csv/releases/download/v1.0.3/json2csv_1.0.3_darwin_amd64.tar.gz"
-      sha256 "3352bf179048d1d4ba6af8979bc6acf2e20bbac567bfd488b4d5582eed401404"
+      url "https://github.com/koddr/json2csv/releases/download/v1.0.4/json2csv_1.0.4_darwin_amd64.tar.gz"
+      sha256 "7da54af096e4f41f965db92002f4452d7c2895e0d62d3d1a6391da56377ac941"
 
       def install
         bin.install "json2csv"
@@ -30,16 +30,16 @@ class Json2csv < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/koddr/json2csv/releases/download/v1.0.3/json2csv_1.0.3_linux_amd64.tar.gz"
-      sha256 "efaa9040283872efdf0d90d1247d9b24a219af73ba7d804d75b2bd1684a8e234"
+      url "https://github.com/koddr/json2csv/releases/download/v1.0.4/json2csv_1.0.4_linux_amd64.tar.gz"
+      sha256 "be8afe64d7196e2f48135a9c89fad33414c648cc119cc5b0a50e52ceaf7d502f"
 
       def install
         bin.install "json2csv"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koddr/json2csv/releases/download/v1.0.3/json2csv_1.0.3_linux_arm64.tar.gz"
-      sha256 "fd4ac67dd7cfafefec7e3f978672736f78c1c4c6addc89adaa091a96f93638ec"
+      url "https://github.com/koddr/json2csv/releases/download/v1.0.4/json2csv_1.0.4_linux_arm64.tar.gz"
+      sha256 "a745cac18bb72a941754d82cd8a7be13588bfc9bae15d6a3026749f266e6db2b"
 
       def install
         bin.install "json2csv"
