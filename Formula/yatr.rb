@@ -12,7 +12,7 @@ class Yatr < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/koddr/yatr/releases/download/v1.2.0/yatr_1.2.0_darwin_arm64.tar.gz"
-      sha256 "0c12dcb2cf63dc1424e386728488a6e083761ad663b7f26f5b9cbbfa5b34ca27"
+      sha256 "35eca9e23c35bb75e3c8be32ba664147b986ccb45580457e4d4e1ec4621ce34c"
 
       def install
         bin.install "yatr"
@@ -20,7 +20,7 @@ class Yatr < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/koddr/yatr/releases/download/v1.2.0/yatr_1.2.0_darwin_amd64.tar.gz"
-      sha256 "0671ddd5158ae23970952b12e5885242bcc0373151c0146942bda29debd62088"
+      sha256 "5050e8a7d4d4bb87e0faf2dd6f6231173fd05d1c4d1e7e9d9525fa8fdbb53cbe"
 
       def install
         bin.install "yatr"
@@ -31,7 +31,7 @@ class Yatr < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/koddr/yatr/releases/download/v1.2.0/yatr_1.2.0_linux_arm64.tar.gz"
-      sha256 "fa68bc4336593406f22ed72ec9f2d56591b3a928aa128dbe9554757e415d7013"
+      sha256 "bdc8baab7cb34bf2e60de4d4919c7dfa1ae8d9915b2471d40af5b840165ba0d4"
 
       def install
         bin.install "yatr"
@@ -39,7 +39,7 @@ class Yatr < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/koddr/yatr/releases/download/v1.2.0/yatr_1.2.0_linux_amd64.tar.gz"
-      sha256 "2c31702582c281a8b3e7fddb1c799e862701a6708a9bccbf057b6c6c2d31d929"
+      sha256 "f820c990597f28ab9d79ac4d53bb6b1b4ca9591990f59bf7dad8cca70a8d320a"
 
       def install
         bin.install "yatr"
