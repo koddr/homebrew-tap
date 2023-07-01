@@ -6,21 +6,21 @@ class Yatr < Formula
   desc "Yet Another Task Runner (or yatr for a short) allows you to organize and automate your routine operations that you normally do in Makefile (or else) for each project.
 "
   homepage "https://github.com/koddr/yatr"
-  version "1.1.0"
+  version "1.2.0"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/koddr/yatr/releases/download/v1.1.0/yatr_1.1.0_darwin_arm64.tar.gz"
-      sha256 "544335676d3f66eff08e533aa96611c70ae69488b8a14607590111a60a45e72a"
+      url "https://github.com/koddr/yatr/releases/download/v1.2.0/yatr_1.2.0_darwin_arm64.tar.gz"
+      sha256 "944cd326bdc76e3a35e6ca5e76f4f9899fe8afb936207d780c0d5d2437405380"
 
       def install
         bin.install "yatr"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koddr/yatr/releases/download/v1.1.0/yatr_1.1.0_darwin_amd64.tar.gz"
-      sha256 "346972480a858403ad8bb42f6853ab6dd832d031ed91a4fee680e6c88ce1262b"
+      url "https://github.com/koddr/yatr/releases/download/v1.2.0/yatr_1.2.0_darwin_amd64.tar.gz"
+      sha256 "a02d9b5e1b2ce20eb4935a2cdeb1b306f08ec24eff653f5bff99ca70bcac41d0"
 
       def install
         bin.install "yatr"
@@ -30,16 +30,16 @@ class Yatr < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/koddr/yatr/releases/download/v1.1.0/yatr_1.1.0_linux_arm64.tar.gz"
-      sha256 "0be418dc3c5546f43b4218729c2de78dec31893b9521a6eb8fd5944c2414673b"
+      url "https://github.com/koddr/yatr/releases/download/v1.2.0/yatr_1.2.0_linux_arm64.tar.gz"
+      sha256 "106f4fd086e1a1a49fb9badbac7f56dcdac9e82e5965648c62df0058b639d733"
 
       def install
         bin.install "yatr"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/koddr/yatr/releases/download/v1.1.0/yatr_1.1.0_linux_amd64.tar.gz"
-      sha256 "779913fafab9631ce7d20e053feac5c3d7df99a97366131e431d8ca9589cd4c2"
+      url "https://github.com/koddr/yatr/releases/download/v1.2.0/yatr_1.2.0_linux_amd64.tar.gz"
+      sha256 "ebb5aaf3ec330e35971460bf8920a9fb3ecf48f5a399680a6e1157ffe1d39b7a"
 
       def install
         bin.install "yatr"
